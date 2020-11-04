@@ -1,15 +1,15 @@
-import express from 'express';
-import mongoose from 'mongoose';
-import path from 'path';
-import cors from 'cors';
-import bodyParser from 'body-parser';
-import morgan from 'morgan';
-import config from './config';
+const express =require( 'express');
+const mongoose =require( 'mongoose');
+const path =require( 'path');
+const cors =require( 'cors');
+const bodyParser =require( 'body-parser');
+const morgan =require( 'morgan');
+const config =require( './config');
 
 // routes
-import authRoutes from './routes/api/auth';
+const authRoutes =require( './routes/api/auth');
 
-import userRoutes from './routes/api/users';
+const userRoutes =require( './routes/api/users');
 
 const { MONGO_URI } = config;
 
@@ -50,4 +50,4 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-export default app;
+module.exports = app;
