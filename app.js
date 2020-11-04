@@ -18,7 +18,7 @@ const app = express();
 // CORS Middleware
 app.use(cors());
 // Logger Middleware
-// app.use(morgan('dev'));
+//app.use(morgan('dev'));
 // Bodyparser Middleware
 app.use(bodyParser.json());
 
